@@ -1,0 +1,297 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color1: rgb(231, 245, 179);
+  --form-bg: #f8f4e5;
+  --form-shadow: #ffa580;
+  --form-primarX-highlight: #95a4ff;
+  --form-secondarX-highlight: #ffc8ff;
+  --font-size: 14pt;
+  --font-face: "Fjalla One";
+  --font-color: #2A293E;
+}
+
+body {
+  background-color: var(--color1);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+section {
+  height: 100vh;
+}
+
+.sec1 {
+  padding: 0.5rem 1rem;
+}
+.sec1 .bubble-con {
+  padding: 0.1rem;
+}
+.sec1 .bubble-con .bubble {
+  background-color: skyblue;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 4px solid black;
+  margin: 0.2rem;
+}
+.sec1 .circle-in {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid yellowgreen;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease-in-out;
+}
+.sec1 .circle-in:hover {
+  -webkit-animation: name duration timing-function delay iteration-count direction fill-mode;
+          animation: name duration timing-function delay iteration-count direction fill-mode;
+  -webkit-animation: roll 5s ease-in-out infinite;
+          animation: roll 5s ease-in-out infinite;
+  border: 1px dotted black;
+}
+.sec1 .circle-in .circle-in1 {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #2A293E;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease-in-out;
+}
+.sec1 .circle-in .circle-in1:hover {
+  -webkit-animation: roll 5s ease-in-out infinite;
+          animation: roll 5s ease-in-out infinite;
+  border: 1px dashed black;
+}
+.sec1 .circle-in .circle-in1 .circle-in2 {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  transition: all 0.4s ease-in-out;
+  border: 0px solid black;
+  transition: all 0.4s ease-in-out;
+}
+.sec1 .circle-in .circle-in1 .circle-in2:hover {
+  transform: scale(0.9);
+}
+.sec1 .blue-circle {
+  background-color: var(--form-primarX-highlight);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 4px solid black;
+  position: fixed;
+  bottom: -7%;
+  left: -2%;
+}
+
+.sec2 {
+  padding: 0.5rem 1rem;
+}
+.sec2 .circle-3d {
+  position: relative;
+  background-color: #ffa580;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset, rgba(50, 50, 93, 0.25) 0px -30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px -18px 36px -18px inset;
+  -webkit-animation: rotate 5s ease-in-out infinite;
+          animation: rotate 5s ease-in-out infinite;
+}
+.sec2 .circle-3d .circle-3d-in {
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--color1);
+  transition: all 0.4s ease-in-out;
+  -webkit-animation: rotate 5s ease-in-out infinite;
+          animation: rotate 5s ease-in-out infinite;
+  box-shadow: rgba(136, 165, 191, 0.3) 6px 2px 16px 0px, rgba(255, 255, 255, 0.5) -6px -2px 16px 0px;
+}
+.sec2 .stick-con {
+  padding: 0.1rem;
+}
+.sec2 .stick-con .stick {
+  position: fixed;
+  bottom: 10%;
+  width: 150px;
+  height: 12px;
+  background-color: white;
+  margin: 1rem 0;
+  border: 1px solid black;
+  transform: rotate(-15deg);
+}
+.sec2 .stick-con .stick::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 100%;
+  height: 50%;
+  background-color: black;
+}
+.sec2 .stick-con .stick2 {
+  bottom: 15%;
+}
+.sec2 .round-line {
+  width: 200px;
+  height: 45px;
+  border-radius: 25px;
+  border: 3px solid #2A293E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sec2 .round-line .round {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: radial-gradient(at 30% 30%, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6666666667)) red;
+}
+.sec2 .last-circle {
+  background-color: var(--form-shadow);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 3px solid black;
+  position: fixed;
+  bottom: -10px;
+  right: -8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sec2 .last-circle .last-circle-in {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid black;
+  background-color: var(--color1);
+  margin: auto;
+}
+
+@-webkit-keyframes roll {
+  0% {
+    transform: rotateZ(360deg);
+  }
+  50% {
+    transform: scale(0.2);
+  }
+  100% {
+    transform: scale(1) rotateZ(-360deg);
+  }
+}
+
+@keyframes roll {
+  0% {
+    transform: rotateZ(360deg);
+  }
+  50% {
+    transform: scale(0.2);
+  }
+  100% {
+    transform: scale(1) rotateZ(-360deg);
+  }
+}
+@-webkit-keyframes x {
+  to {
+    left: 250px;
+  }
+}
+@keyframes x {
+  to {
+    left: 250px;
+  }
+}
+@-webkit-keyframes y {
+  to {
+    top: 199.5px;
+  }
+}
+@keyframes y {
+  to {
+    top: 199.5px;
+  }
+}
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotateY(-45deg);
+  }
+  100% {
+    transform: rotateY(45deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotateY(-45deg);
+  }
+  100% {
+    transform: rotateY(45deg);
+  }
+}
+@-webkit-keyframes rotate1 {
+  0% {
+    transform: rotate(0) translate(0);
+  }
+  50% {
+    transform: rotate(-90deg);
+  }
+  100% {
+    transform: rotate(-180deg);
+  }
+}
+@keyframes rotate1 {
+  0% {
+    transform: rotate(0) translate(0);
+  }
+  50% {
+    transform: rotate(-90deg);
+  }
+  100% {
+    transform: rotate(-180deg);
+  }
+}
+@-webkit-keyframes rotate2 {
+  0% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translate(-80px);
+  }
+  100% {
+    transform: translate(1px);
+  }
+}
+@keyframes rotate2 {
+  0% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translate(-80px);
+  }
+  100% {
+    transform: translate(1px);
+  }
+}/*# sourceMappingURL=abstract.css.map */
